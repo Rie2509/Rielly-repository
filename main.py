@@ -7,47 +7,47 @@ name = input ("what is your name")
 print ("welcome to this quiz about valorant\n",name)
 #Ask the user a question 
 answer = input ("what is the most expensive weapon in valorant\n")
-if answer == "operator".upper ():
+if answer == "operator".lower ():
     print ("correct!")
     score += 5
 elif answer == "":
     print ("you didint answer")
 else:
-    print ("incorrect")
+    print ("incorrect its the operator")
 answer = input ("how many sentinals are in valorant\n")
-if answer == "5".upper ():
+if answer == "5".lower ():
     print ("correct!")
     score += 5
 elif answer == "":
     print ("you didint answer")
 else:
-    print ("incorrect")
+    print ("incorrect its 5")
 answer = input ("how many rounds to you need to win an unrated valorant match\n")
-if answer == "13".upper ():
+if answer == "13".lower ():
     print ("correct!")
     score += 5
 elif answer == "":
     print ("you didint answer")
 else:
-    print ("incorrect")
+    print ("incorrect its 13")
 answer = input ("which agent uses a dash ability\n")
-if answer == "jett".upper ():
+if answer == "jett".lower ():
     print ("correct!")
     score += 5
 elif answer == "":
     print ("you didint answer")
 else:
-    print ("incorrect")
+    print ("incorrect its jett")
 answer = input ("which agent burnt down a school building\n")
-if answer == "phoenix".upper ():
+if answer == "phoenix".lower ():
     print ("correct!")
     score += 5
 elif answer == "":
     print ("you didint answer")
 else:
-    print ("incorrect")
-answer == input ("which sentinal places a trap")
-if answer == "cypher" or answer == "deadlock" or answer == "chamber". upper:
+    print ("incorrect its phoenix")
+answer == input ("which sentinal places a trap\n")
+if answer == "cypher" or answer == "deadlock" or answer == "chamber". lower:
     print ("correct!")
     score += 5
 elif answer == "":
@@ -59,6 +59,13 @@ a = "sage"
 b = "chamber"
 c = "killjoy"
 d = "deadlock"
-answer = input(QUESTION_FORMAT.format(question, a, b, c, d).upper)
+answer = input(QUESTION_FORMAT.format(question, a, b, c, d)).lower()
+if answer == a or answer == "a":
+    print ("correct!")
+    score += 5
+elif answer == "":
+    print ("you didint answer")
+else:
+    print ("incorect")
 #end the quiz
 print ("the end",score,"points")
