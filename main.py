@@ -7,10 +7,12 @@ print ("welcome to this quiz about valorant\n",name)
 #Ask the user a question
 play = "yes"
 while play == "yes":
-    try: 
-        tries = int(input("how many attempts to you want at each question"))
-    except:
-        print("thats not a number")
+    while True:
+        try: 
+            tries = int(input("how many attempts to you want at each question"))
+            break
+        except:
+            print("thats not a number")
     answer = input ("what is the most expensive weapon in valorant\n")
     if answer == "operator".lower ():
         print ("correct!")
@@ -74,4 +76,4 @@ while play == "yes":
         print ("incorect")
     #end the quiz
     print ("the end",score,"points")
-    play = input("do you want to plat again").lower()
+    play = input("do you want to play again").lower()
