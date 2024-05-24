@@ -1,4 +1,5 @@
 score = 0
+import random
 QUESTION_FORMAT = "{}\nA.{}B.{}c.{}d.{}"
 agent_list = ["phoenix","jett","reyna","neon","iso","raze","chamber","cypher","killjoy","deadlock","sage","clove","brimstone","harbor","omen","viper","sova","skye","kayo","breach","fade","gekko"]
 goodcomments_list = ["good job","nice work","horray"]
