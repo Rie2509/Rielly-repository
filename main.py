@@ -1,6 +1,8 @@
 score = 0
 QUESTION_FORMAT = "{}\nA.{}B.{}c.{}d.{}"
 agent_list = ["phoenix","jett","reyna","neon","iso","raze","chamber","cypher","killjoy","deadlock","sage","clove","brimstone","harbor","omen","viper","sova","skye","kayo","breach","fade","gekko"]
+goodcomments_list = ["good job","nice work","horray"]
+badcomments_list = ["wrong","dumb","idiot"]
 #Ask the user their name and save it
 name = input ("what is your name") 
 #Greet the user and introduce the quiz
@@ -16,15 +18,15 @@ while play == "yes":
             print("thats not a number")
     answer = input ("what is the most expensive weapon in valorant\n").lower()
     if answer == "operator".lower ():
-        print ("correct!")
+        print (goodcomments_list[0])
         score += 5
     elif answer == "":
         print ("you didint answer")
     else:
-        print ("incorrect its the operator")
+        print (badcomments_list[0])
     answer = input ("how many sentinals are in valorant\n").lower()
     if answer == "5".lower ():
-        print ("correct!")
+        print (goodcomments_list[0])
         score += 5
     elif answer == "":
         print ("you didint answer")
@@ -32,23 +34,23 @@ while play == "yes":
         print ("incorrect its 5")
     answer = input ("how many rounds to you need to win an unrated valorant match\n").lower()
     if answer == "13".lower ():
-        print ("correct!")
+        print (goodcomments_list[0])
         score += 5
     elif answer == "":
         print ("you didint answer")
     else:
-        print ("incorrect its 13")
+        print (badcomments_list[0])
     answer = input ("which agent uses a dash ability\n").lower()
     if answer == "jett".lower ():
-        print ("correct!")
+        print (goodcomments_list[0])
         score += 5
     elif answer == "":
         print ("you didint answer")
     else:
-        print ("incorrect its jett")
+        print (badcomments_list[0])
     answer = input ("which agent burnt down a school building\n").lower()
     if answer == "phoenix".lower ():
-        print ("correct!")
+        print (goodcomments_list[0])
         score += 5
     elif answer == "":
         print ("you didint answer")
@@ -56,12 +58,12 @@ while play == "yes":
         print ("incorrect its phoenix")
     answer == input ("which sentinal places a trap\n").lower()
     if answer == "cypher" or answer == "deadlock" or answer == "chamber". lower:
-        print ("correct!")
+        print (goodcomments_list[0])
         score += 5
     elif answer == "":
         print ("you didint answer")
     else:
-        print ("incorect")
+        print (badcomments_list[0])
     question = "which sentinal has healing powers"
     a = "sage"
     b = "chamber"
@@ -69,12 +71,12 @@ while play == "yes":
     d = "deadlock"
     answer = input(QUESTION_FORMAT.format(question, a, b, c, d)).lower()
     if answer == a or answer == "a":
-        print ("correct!")
+        print (goodcomments_list[0])
         score += 5
     elif answer == "":
         print ("you didint answer")
     else:
-        print ("incorect")
+        print (badcomments_list[0])
     #end the quiz
     print ("the end",score,"points")
     play = input("do you want to play again").lower()
