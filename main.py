@@ -2,7 +2,7 @@ import random
 
 
 score = 0
-QUESTION_FORMAT = "{}\nA.{}B.{}c.{}d.{}"
+QUESTION_FORMAT = "{}\n0.{}1.{}2.{}3.{}"
 agent_list = ["phoenix","jett","reyna","neon","iso","raze","chamber","cypher","killjoy","deadlock","sage","clove","brimstone","harbor","omen","viper","sova","skye","kayo","breach","fade","gekko"]
 goodcomments_list = ["good job","nice work","horray"]
 badcomments_list = ["wrong","dumb","idiot"]
@@ -36,13 +36,21 @@ while play == "yes":
         except:
             print("thats not a number")
     answer = input ("what is the most expensive weapon in valorant\n").lower()
+    answer = input(QUESTION_FORMAT.format(QUESTIONS[0],OPTIONS[0][0],
+                                          OPTIONS[0][1],OPTIONS[0][2],OPTIONS[0][3]))
+    
+    
     if answer == "operator".lower ():
         print (random.choice(goodcomments_list))
         score += 5
     elif answer == "":
         print ("you didint answer")
-    else:
+    if answer == OPTIONS[0][ANSWERS[0]] or answer == SHORT_OPTIONS[ANSWERS[0]]:
         print (random.choice(badcomments_list))
+    else:
+        print("You didn't pick an option")
+
+
     answer = input ("how many sentinals are in valorant\n").lower()
     if answer == "5".lower ():
         print (random.choice(goodcomments_list))
